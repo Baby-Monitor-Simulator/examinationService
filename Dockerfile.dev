@@ -1,6 +1,6 @@
 FROM openjdk:17-jdk-slim
 
-WORKDIR /result
+WORKDIR /examination
 
 # Copy Maven Wrapper and pom.xml
 COPY mvnw pom.xml ./
@@ -13,8 +13,8 @@ COPY src ./src
 RUN chmod +x mvnw
 
 # Copy the entrypoint script
-COPY entrypoint.sh /result/entrypoint.sh
-RUN chmod +x /result/entrypoint.sh
+COPY entrypoint.sh /examination/entrypoint.sh
+RUN chmod +x /examination/entrypoint.sh
 
 # Set the entrypoint
 ENTRYPOINT ["./entrypoint.sh"]
