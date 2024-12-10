@@ -9,6 +9,6 @@ services:
       - ./mvnw:/examination-service/mvnw           # Mount the mvnw script
       - ./pom.xml:/examination-service/pom.xml     # Mount the pom.xml if needed
     ports:
-      - "8082:8082"                     # Map port 8091 to the host
+      - "8086:8086"                     # Map port 8091 to the host
     environment:
       SPRING_PROFILES_ACTIVE: dev
